@@ -205,13 +205,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
+  m_LocalPosition: {x: 0, y: 10, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -449,6 +449,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 873b5226b3060764ca04b8b73bdbd690, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SnakeController
+  MoveSpeed: 5
+  SteerSpeed: 180
+  BodySpeed: 5
+  Gap: 100
+  BodyPrefab: {fileID: 8904993984009793319, guid: 617594e3f03186a4b8ba050832ac3381, type: 3}
+  ApplePrefab: {fileID: 6906010998206038782, guid: 3262cb2eecf3e214f95614f2ff6447fb, type: 3}
+  EnlargedScale: {x: 2, y: 2, z: 2}
+  EnlargeDuration: 5
+--- !u!65 &1216413894
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216413889}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1001 &66203465210301894
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -565,6 +594,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 740117162107338747, guid: 8dbc8a7086e72444da46d67b10b6e07c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1216413891}
+    - targetCorrespondingSourceObject: {fileID: 740117162107338747, guid: 8dbc8a7086e72444da46d67b10b6e07c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1216413894}
   m_SourcePrefab: {fileID: 100100000, guid: 8dbc8a7086e72444da46d67b10b6e07c, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
