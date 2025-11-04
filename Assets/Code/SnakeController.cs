@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -121,6 +122,10 @@ public class SnakeController : MonoBehaviour
             Destroy(other.gameObject);
             SpawnApple();
             StartCoroutine(EnlargeSnakeTemporarily());
+        } else if (other.gameObject.tag == "Wall")
+        {
+            Debug.Log("Wall hit");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
     
