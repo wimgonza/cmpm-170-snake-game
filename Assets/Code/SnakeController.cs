@@ -47,7 +47,7 @@ public class SnakeController : MonoBehaviour
         GrowSnake();
         GrowSnake();
 
-        SpawnApple();
+        // SpawnApple();
     }
 
     void Update()
@@ -114,7 +114,7 @@ public class SnakeController : MonoBehaviour
 
             GrowSnake();
 
-            SpawnApple();
+            // SpawnApple();
             StartCoroutine(EnlargeSnakeTemporarily());
         }
         else if (other.gameObject.CompareTag("Wall"))
